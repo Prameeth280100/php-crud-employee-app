@@ -10,14 +10,14 @@ services:
       - php
       - mysql
     ports:
-      - "8080:80"
+      - "8081:80"
     volumes:
       - ./public:/var/www/html/
   mysql:
     image: mysql:5.7
     restart: always
     ports:
-      - "3306:3306"
+      - "3311:3306"
     command: --default-authentication-plugin=mysql_native_password
     volumes:
       - db_data:/var/lib/mysql
